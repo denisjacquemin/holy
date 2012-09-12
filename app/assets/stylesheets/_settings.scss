@@ -1,0 +1,21 @@
+// media queries variables
+$breakpoint-phone: "only screen and (max-width: 480px)";
+$breakpoint-tablet: "only screen and (min-width: 480px) and (max-width: 990px)";
+$breakpoint-desktop: "only screen and (min-width: 1000px)";
+$breakpoint-widescreen: "only screen and (min-width: 1300px)";
+$breakpoint-retina: "only screen and (-webkit-min-device-pixel-ratio : 2)";
+
+$white-bg:					#fdfdfd;
+$brown-bg: 					rgb(234, 226, 211);
+$grey:						#f5f2ed;
+$soft-grey:					rgb(128, 130, 133);
+$orange: 					rgb(240, 129, 43);
+$almost-black:				rgb(38, 38, 38);
+$beige:						rgb(234, 226, 211);
+
+
+// Fonts
+$font-helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-georgia: georgia, arial, serif;
+$font-arial: 'arial rounded mt bold', serif;
+$font-ProximaNovaSoft: ProximaNovaSoft, helvetica, arial;

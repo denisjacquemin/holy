@@ -1,6 +1,25 @@
-<h1>Editing item</h1>
+<header>
+	<h1>Edition</h1>
+</header>
+<div id="main">
+	<%= render 'form' %>
+</div>
+<div id="sidebar">
+	<div id="deal">
+		<ul>
+			<li id="price"><span class="currency">$</span>1200</li>
+			<li id="original-price">Original Price: <s>$1400</s></li>
+			<li id="bookit"><button class="btn btn-primary btn-large">Contact the Owner</button></li>
+			<li class="info">30% SAVINGS</li>
+			<li class="info">3 Bedrooms</li>
+			<li class="info">6 Sleeps</li>
+			<li class="info"><a href="#">24 Reviews</a></li>
+		</ul>
+	</div>
+</div>
 
-<%= render 'form' %>
+
+
 
 <%= link_to 'Show', @item %> |
 <%= link_to 'Back', items_path %>

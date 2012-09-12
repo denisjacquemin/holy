@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Holiday</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content"">
+		<meta name="viewport" content="width=device-width">
+		<meta name="breakpoint" data="phone" media="(max-width: 480px)">
+		<meta name="breakpoint" data="tablet" media="(min-width: 480px) and (max-width: 990px)">
+		<meta name="breakpoint" data="desktop-screen" media="(min-width: 990px)">
+		<meta name="breakpoint" data="widescreen" media="(min-width: 1500px)">
+		<meta name="breakpoint" data="retina" media="only screen and (-webkit-min-device-pixel-ratio : 2)">
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		<title>Escape</title>
+  	</head>
+	<body>
+		<div id="bg-fade"></div>
+		<img id="bg" src="/assets/bg.jpg">
+		<div id="page">
+			<header>
+				<img id="logo" src="/assets/logo.jpg">
+			</header>
+			<div id="content">
+				<%= yield %>
+			</div>
+			<footer>
+				links
+			</footer>
+		</div>
+	</body>
 </html>

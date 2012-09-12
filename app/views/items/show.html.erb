@@ -1,15 +1,49 @@
+<header>
+	<h1><%= @item.title %></h1>
+</header>
+<div id="main">
+	<img src="/assets/872cba0d-f3bb-4b5d-935c-3e900adc27fb_700_q60__jpg.jpg" alt="Residence Inn Scottsdale North • Scottsdale, AZ">
+	<h2>Highlights</h2>
+	<ul>
+		<li>One-Night Stay for Two in a Studio King or Queen</li>
+		<li>Bottle of Wine</li>
+		<li>One In-Room Movie</li>
+	</ul>
+	<h2>Full Description</h2>
+	<%= raw@item.description %>
+	<h2>Reviews</h2>
+	<ul id="reviews">
+		<li>
+			<h1>Lovely historic house in great town</h1>
+			<span class="author">by ILoveTrainTravel</span> <span class="location">London, UK</span>
+			<span class="timing">Review Submitted: 21 September 2011 | Date of Stay: May 2011</span>
+			<p>Lovely house! The description was accurate to the last word and the owner and her agent a joy to deal with. Everything went just as planned. The house is perfect for holidaying families, with comfortable good facilities. Location is great - central enough to walk everywhere but out of the bustle of the touristy town centre. The owner has put together a great 'guidebook' to Bruges and we tried several of the recommended restaurants, which were all of a good standard.</p>
+			<p>We had a great time!</p>
+			<p>Recommended for:  Tourists without a Car, Sightseeing, Families with Young Children</p>
+		</li>
+		<li>
+			<h1>Great accomodation in a perfect location</h1>
+			<span class="author">by Nick W.</span>
+			<span class="timing">Review Submitted: 21 September 2011 | Date of Stay: May 2011</span>
+			<p>We had a brilliant stay in De Hoedenmaker. It's situated in a great location near to the city centre and a short stroll from a number of shops and restaurants. The house itself is full of character and really well equiped with everything that you'd need for your stay. The owner, Francis, was really helpful and gave us a thorough introdution to Bruges. I'd certainly advise anyone visiting Bruges to stay at De Hoedenmaker.</p>
+		</li>
+	</ul>
+</div>
+<div id="sidebar">
+	<div id="deal">
+		<ul>
+			<li id="price"><span class="currency">$</span>1200</li>
+			<li id="original-price">Original Price: <s>$1400</s></li>
+			<li id="bookit"><button class="btn btn-primary btn-large">Contact the Owner</button></li>
+			<li class="info">30% SAVINGS</li>
+			<li class="info">3 Bedrooms</li>
+			<li class="info">6 Sleeps</li>
+			<li class="info"><a href="#">24 Reviews</a></li>
+		</ul>
+	</div>
+</div>
+
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @item.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @item.description %>
-</p>
-
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
