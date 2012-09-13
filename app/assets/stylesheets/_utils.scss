@@ -43,3 +43,8 @@
 	
 	z-index: -10;
 }
+
+@mixin input-styles {
+	font-family: $sans-serif;
+	font-size: 16px;
+}
