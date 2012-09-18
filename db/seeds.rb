@@ -7,5 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Field.create(:label => 'Sauna')
-Field.create(:label => 'Piscine')
+interior = FieldGroup.create(:label => 'Equipements interieurs')
+exterior = FieldGroup.create(:label => 'Equipements exterieurs')
+building = FieldGroup.create(:label => 'Batiment')
+annexe = FieldGroup.create(:label => 'Service annexes')
+
+
+
+Field.create(:label => 'Sauna', :field_group_id => interior.id)
+Field.create(:label => 'Piscine', :field_group_id => interior.id)
