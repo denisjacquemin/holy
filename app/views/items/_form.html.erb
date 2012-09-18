@@ -26,6 +26,15 @@
   
   <%= render :partial => 'highlights', :locals => {:f => f} %>
 
+  <% Field.all.each do |field| %>
+	<div class="field">
+		<%= label_tag :field_ids, field.label %>
+		<div class="input">
+			<%= check_box_tag :field_ids, field.id, @item.fields.include?(field), :name => 'item[field_ids][]' -%>
+		</div>
+	</div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
