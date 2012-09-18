@@ -23,6 +23,9 @@
     	<%= f.text_area :description %>
 	</div>
   </div>
+  
+  <%= render :partial => 'highlights', :locals => {:f => f} %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

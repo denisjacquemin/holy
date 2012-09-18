@@ -8,121 +8,163 @@
 			}
 			
 			div#content {
-				
+				@include clearfix;
 				background: $white-bg;
 				padding: 0;
 				color: $almost-black;
 				
 				header {
-					margin: 30px 0 30px 0;
-					padding: 0 20px;
+					margin: 0;
+					padding: 50px 20px;
+					background: url('/assets/items/item-1.jpg');
+					background-size: 100%;
 					h1 {
+						background: url('/assets/bg-title.png');
 						font-size: 36px;
+						color: white;
+						padding: 20px;
+						width: 70%;
+						border-radius: 8px;
 					}
 				}
 				
 				
 				div#main {
-					float: left;
-					width: 580px;
-					margin: 0 20px 0 20px;
-					img {
-						width: 600px;
-						margin: 0 0 0 -20px;
-						border-top-right-radius: 15px;
-						border-bottom-right-radius: 15px;
-						-webkit-background-clip: padding-box;
-					}
-					h2 {
-						font-size: 24px;
-						margin: 25px 0 15px 0;
-					}
-					
-					ul, p {
-						font-family: $font-helvetica;
-						font-size: 14px;
-					}
-					
-					ul {
-						margin: 10px 0;
-					}
-					
-					li {
-						border-bottom: 1px solid #d9d9da;
-						padding: 7px 3px 7px 15px;
-					}
-					
-					p {
-						line-height: 18px;
-						margin: 0 0 25px 0;
-					}
-					ul#reviews {
-						li {
-							padding: 20px 0;
+					@include clearfix;
+					section {
+						float: left;
+						width: 580px;
+						margin: 0 20px 0 20px;
+						h2 {
+							font-size: 24px;
+							margin: 25px 0 15px 0;
 						}
-						
-						h1 {
-							font-weight:bold;
-							font-size: 18px;
-							margin: 5px 0;
+
+						ul, p {
+							font-family: $font-helvetica;
+							font-size: 14px;
 						}
-						span.author, span.location, span.timing {
-							color: $soft-grey;
-							font-size: 12px;
-						}
-						span.timing {
-							display:block;
-							margin: 3px 0;
-						}
-						p {
+
+						ul {
 							margin: 10px 0;
+						}
+
+						li {
+							border-bottom: 1px solid #d9d9da;
+							padding: 7px 3px 7px 15px;
+						}
+
+						p {
+							line-height: 18px;
+							margin: 0 0 25px 0;
+						}
+					}
+					div#sidebar {
+						width: 290px;
+						float: left;
+						background: $grey;
+						padding: 10px 20px 10px 10px;
+						div#deal {
+							border-radius: 4px;
+							-webkit-background-clip: padding-box;
+							background: white;
+							border: 1px solid #bbb;
+							padding: 10px;
+
+							li#price {
+								color: $orange;
+								font-size: 44px;
+								text-align: center;
+								margin: 15px 0 0 0;
+							}
+							li#original-price {
+								font-family: $font-helvetica;
+								font-size: 13px;
+								color: $almost-black;
+								text-align: center;
+								margin: 10px 0;
+							}
+							li#bookit {
+								text-align: center;
+								margin: 30px 0;
+							}
+							li.info {
+								font-family: $font-helvetica;
+								font-size: 12px;
+								color: rgb(128, 130, 133);
+								text-align: center;
+								margin: 0;
+								padding: 10px 0;
+								color: $soft-grey;
+								border-bottom: 1px solid #d9d9d9;
+								text-transform: uppercase;
+							}
 						}
 					}
 				}
 				
-				div#sidebar {
-					width: 290px;
-					float: left;
-					background: $grey;
-					padding: 10px 20px 10px 10px;
-					border-top-left-radius: 15px;
-					div#deal {
-						border-radius: 4px;
-						-webkit-background-clip: padding-box;
-						background: white;
-						border: 1px solid #bbb;
-						padding: 10px;
+				.img-separator {
+					margin: 0;
+					position: relative;
+					max-height: 450px;
+					overflow: hidden;
+					img {
+						width: 100%;
+						float: left;
 						
-						li#price {
-							color: $orange;
-							font-size: 44px;
-							text-align: center;
-							margin: 15px 0 0 0;
+					}
+					blockquote {
+						position: absolute;
+						background: rgba(0, 0, 0, 0.8);
+						top: 20px;
+						left: 20px;
+						border-radius: 50%;
+						z-index: 100;
+						width: 324px;
+						min-height: 324px;
+						
+						
+						span, p {
+							font-family: $font-swanky;
+							color: #fff;
 						}
-						li#original-price {
-							font-family: $font-helvetica;
-							font-size: 13px;
-							color: $almost-black;
+						
+						p {
+							padding: 35px 50px;
+							font-size: 24px;
+							line-height: 36px;
 							text-align: center;
-							margin: 10px 0;
-						}
-						li#bookit {
-							text-align: center;
-							margin: 30px 0;
-						}
-						li.info {
-							font-family: $font-helvetica;
-							font-size: 12px;
-							color: rgb(128, 130, 133);
-							text-align: center;
-							margin: 0;
-							padding: 10px 0;
-							color: $soft-grey;
-							border-bottom: 1px solid #d9d9d9;
-							text-transform: uppercase;
+							width: 224px;
+							letter-spacing: 2px;
+							
 						}
 					}
 				}
+				
+				ul#reviews {
+					li {
+						padding: 20px 0;
+					}
+					
+					h1 {
+						font-weight:bold;
+						font-size: 18px;
+						margin: 5px 0;
+					}
+					span.author, span.location, span.timing {
+						color: $soft-grey;
+						font-size: 12px;
+					}
+					span.timing {
+						display:block;
+						margin: 3px 0;
+					}
+					p {
+						margin: 10px 0;
+					}
+				}
+				
+				
 			}
 			
 		}

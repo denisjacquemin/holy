@@ -1,0 +1,11 @@
+<%= f.fields_for :highlights do |highlight_fields| %>
+	<div class="field">
+	    <%= f.label :highlight %>
+		<div class="input">
+	    	<%=  highlight_fields.text_field :content %>
+			<% unless highlight_fields.object.nil? || highlight_fields.object.new_record? %>
+				<%= highlight_fields.check_box :_destroy %>
+			<% end %>
+		</div>
+	  </div>
+<% end %>
