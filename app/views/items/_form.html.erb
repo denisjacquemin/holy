@@ -27,6 +27,7 @@
   <%= render :partial => 'highlights', :locals => {:f => f} %>
 
   <% FieldGroup.all.each do |field_group| %>
+	<h2><%= field_group.label %></h2>
   	<% field_group.fields.all.each do |field| %>
   	  <div class="field">
   	  	<%= label_tag :field_ids, field.label %>
