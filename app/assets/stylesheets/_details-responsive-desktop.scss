@@ -9,7 +9,7 @@
 			
 			div#content {
 				@include clearfix;
-				background: $white-bg;
+				background: white;
 				padding: 0;
 				color: $almost-black;
 				
@@ -39,20 +39,20 @@
 							font-size: 24px;
 							margin: 25px 0 15px 0;
 						}
-
 						ul, p {
 							font-family: $font-helvetica;
 							font-size: 14px;
 						}
 
-						ul {
+						ul.bullets {
 							margin: 10px 0;
+							li {
+								border-bottom: 1px solid #d9d9da;
+								padding: 7px 3px 7px 15px;
+							}
 						}
 
-						li {
-							border-bottom: 1px solid #d9d9da;
-							padding: 7px 3px 7px 15px;
-						}
+						
 
 						p {
 							line-height: 18px;

@@ -1,0 +1,47 @@
+@media #{$breakpoint-desktop}  {
+	body {
+		div#page {
+			div#content {
+				header.edit {
+					height: 40px;
+				}
+				div#main.edit {
+					section {
+						margin: 10px 0 10px 0;
+						padding: 0 10px 0 0;
+						width: 620px;
+						border-right: 1px dotted #888;
+						ul#edit-item-nav {
+							background: white;
+							li {
+								
+								a {
+									color: #777;
+									background: #eee;
+									border-radius: 0;
+								}
+							}
+							li.active {
+								a {
+									
+									color: black;
+									background: white;
+								}
+							}
+						}
+						div.tab-content {
+							padding: 0 20px;
+							
+						}
+					}
+					div#sidebar {
+						width: 279px;
+						background: white;
+						
+						
+					}
+				}
+			}
+		}
+	}
+}
