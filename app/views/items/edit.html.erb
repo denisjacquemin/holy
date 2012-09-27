@@ -2,54 +2,7 @@
 	<h1>Edition</h1>
 </header>
 <div id="main" class="edit">
-	<%= form_for(@item) do |f| %>
-		<section>
-			<ul id="edit-item-nav" class="nav nav-tabs">
-				<li class="active"><a href="#guidelines" data-toggle="tab">Guidelines</a></li>
-				<li><a href="#basics" data-toggle="tab">Basics</a></li>
-				<li><a href="#pictures" data-toggle="tab">Pictures</a></li>
-				<li><a href="#fields" data-toggle="tab">Details</a></li>
-				<li><a href="#highlights" data-toggle="tab">One more things</a></li>
-			</ul>
-			<div class="tab-content">
-			  <div class="tab-pane active" id="guidelines">
-				<h2>Soyez vendeur</h2>
-				<p>Dans la description de votre bien soyez vendeur, utilisez un vocabulaire positif, donnez envie a vos lecteurs, utilisez des phrases courtes, ne vous repetez pas.</p>
-				<p>Utilisez des images de qualitee, rien de pire qu'une image floue</p>
-			  </div>
-			  <div class="tab-pane" id="basics">
-			    <%= render :partial => 'general_form', :locals => {:f => f} %>
-			  </div>
-			  <div class="tab-pane" id="pictures">
-			    <p>upload pictures</p>
-			  </div>
-			  <div class="tab-pane" id="fields">
-			    <%= render :partial => 'fields_form', :locals => {:f => f} %>
-			  </div>
-			  <div class="tab-pane" id="highlights">
-			    <%= render :partial => 'highlights', :locals => {:f => f} %>
-			  </div>
-			</div>
-    	</section>
-		<div id="sidebar">
-			<% if @item.errors.any? %>
-			  <div id="error_explanation">
-			    <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
-
-			    <ul>
-			    <% @item.errors.full_messages.each do |msg| %>
-			      <li><%= msg %></li>
-			    <% end %>
-			    </ul>
-			  </div>
-			<% end %>
-			<div class="actions">
-				<%= f.submit :class => 'btn btn-primary' %>
-		  	</div>
-			<%= link_to 'Show', @item %> |
-			<%= link_to 'Back', items_path %>
-		</div>
-	<% end %>
+	<%= render 'form'%>
 </div>
 
 
