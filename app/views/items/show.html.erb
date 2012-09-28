@@ -11,7 +11,7 @@
 			<% end %>
 		</ul>
 		<h2>Full Description</h2>
-		<%= raw@item.description %>
+		<%= raw @item.description %>
 	</section>
 	<div id="sidebar">
 		<div id="deal">
@@ -33,6 +33,43 @@
 		<span></span>
 		<p>"<br>La maison est principalement destinée à accueillir des groupes familiaux</p></blockquote>
 	<img src="/assets/items/item-3.jpg">
+</div>
+<div id="fields">
+	<table class="table table-bordered table-striped">
+		<% FieldGroup.all.each do |field_group| %>
+			<% unless field_group.fields.empty? %>
+			 	<% 
+					showFieldGroup = true 
+					reset_cycle()
+				%>
+				<% rowClosed = true %>
+				<% field_group.fields.all.each do |field| %>
+					<% if @item.fields.include?(field) %>
+						<% newRow = cycle('true', 'false') %>
+						<% if newRow == 'true' %>
+							<% rowClosed = false %>
+							<tr>
+								<th>
+									<% if showFieldGroup %>
+										<%= field_group.label %>
+										<% showFieldGroup = false %>
+									<% end %>
+								</th>
+								<td><%= label_tag :field_ids, field.label %></td>
+						<% else %>
+					   			<td><%= label_tag :field_ids, field.label %></td>
+					   		</tr>
+							<% rowClosed = true%>
+						<% end %>
+					<% end %>
+				<% end %>
+				<% if rowClosed == false %>
+						<td>&nbsp;</td>
+					</tr>
+				<% end %>
+			<% end %>
+		<% end %>
+	</table>
 </div>
 <h2>Reviews</h2>
 <ul id="reviews">
