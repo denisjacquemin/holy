@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  attr_accessible :description, :title, :address, :price, :highlights_attributes, :field_ids
+  attr_accessible :description, :title, :address, :price, :quote, :highlights_attributes, :field_ids
   
   has_many :highlights
   accepts_nested_attributes_for :highlights, 

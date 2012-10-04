@@ -1,3 +1,9 @@
+<div class="field">
+  <%= f.label :quote %>
+	<div class="input">
+  	<%= f.text_field :quote %>
+	</div>
+</div>
 <%= f.fields_for :highlights do |highlight_fields| %>
 	<div class="field">
 	    <%= f.label :highlight %>

@@ -28,9 +28,11 @@
 </div>
 
 <div class="img-separator">
-	<blockquote>
-		<span></span>
-		<p>"<br>La maison est principalement destinée à accueillir des groupes familiaux</p></blockquote>
+	<% unless @item.quote.empty? %>
+		<blockquote>
+			<p>"<br><%= @item.quote %></p>
+		</blockquote>
+	<% end %>
 	<img src="/assets/items/item-3.jpg">
 </div>
 
