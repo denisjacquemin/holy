@@ -1,0 +1,36 @@
+<h2>Accommodation and Amenities</h2>
+<table class="table table-bordered table-striped">
+	<% FieldGroup.all.each do |field_group| %>
+		<% unless field_group.fields.empty? %>
+		 	<% 
+				showFieldGroup = true 
+				reset_cycle()
+			%>
+			<% rowClosed = true %>
+			<% field_group.fields.all.each do |field| %>
+				<% if @item.fields.include?(field) %>
+					<% newRow = cycle('true', 'false') %>
+					<% if newRow == 'true' %>
+						<% rowClosed = false %>
+						<tr>
+							<th>
+								<% if showFieldGroup %>
+									<%= field_group.label %>
+									<% showFieldGroup = false %>
+								<% end %>
+							</th>
+							<td><%= label_tag :field_ids, field.label %></td>
+					<% else %>
+				   			<td><%= label_tag :field_ids, field.label %></td>
+				   		</tr>
+						<% rowClosed = true%>
+					<% end %>
+				<% end %>
+			<% end %>
+			<% if rowClosed == false %>
+					<td>&nbsp;</td>
+				</tr>
+			<% end %>
+		<% end %>
+	<% end %>
+</table>

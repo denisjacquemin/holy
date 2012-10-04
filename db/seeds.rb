@@ -7,6 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+# Countries
+france = Country.create(:name => 'France')
+espagne = Country.create(:name => 'Espagne')
+italie = Country.create(:name => 'Italie')
+
+City.create(:name => 'Nice', :country_id => france.id)
+City.create(:name => 'Lyon', :country_id => france.id)
+City.create(:name => 'Madrid', :country_id => espagne.id)
+City.create(:name => 'Barcelone', :country_id => espagne.id)
+
+
+
+
 propertyType = FieldGroup.create(:label => 'Property Type')
 accommodationType = FieldGroup.create(:label => 'Accommodation Type')
 floorArea = FieldGroup.create(:label => 'Floor Area')
