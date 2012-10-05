@@ -13,17 +13,8 @@
 		<%= raw @item.description %>
 	</section>
 	<div id="sidebar">
-		<div id="deal">
-			<ul>
-				<li id="price"><span class="currency">$</span><%= @item.price %></li>
-				<li id="original-price">Original Price: <s>$1400</s></li>
-				<li id="bookit"><button class="btn btn-primary btn-large">Contact the Owner</button></li>
-				<li class="info">30% SAVINGS</li>
-				<li class="info">3 Bedrooms</li>
-				<li class="info">6 Sleeps</li>
-				<li class="info"><a href="#reviews">24 Reviews</a></li>
-			</ul>
-		</div>
+		<% # render 'deal' %>
+		<%= render 'admin' %>
 	</div>
 </div>
 
@@ -61,8 +52,3 @@
 		</li>
 	</ul>
 </div>
-
-
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>

@@ -67,7 +67,7 @@
 						width: 290px;
 						float: left;
 						padding: 10px 20px 10px 10px;
-						div#deal {
+						> div {
 							border-radius: 4px;
 							-webkit-background-clip: padding-box;
 							background: white;
@@ -96,15 +96,19 @@
 								text-align: center;
 								margin: 30px 0;
 							}
-							li.info {
+							ul#metas li {
 								font-family: $font-helvetica;
 								font-size: 12px;
 								color: rgb(128, 130, 133);
 								margin: 0;
 								padding: 10px 0;
 								color: $soft-grey;
-								border-bottom: 1px solid #d9d9d9;
+								border-top: 1px solid #d9d9d9;
 								text-transform: uppercase;
+								
+								&:first-child{
+									border-top:none;
+								}
 							}
 						}
 					}
