@@ -1,11 +1,11 @@
-<div id="interactive">
-	<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%=u item.address %>&zoom=13&sensor=false&size=690x450">
+<div id="interactive" >
+	<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%=u item.address %>&zoom=15&sensor=false&size=640x450&markers=<%=u item.address %>">
 </div>
 <div id="static1">
-	<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%=u item.address %>&zoom=6&sensor=false&size=250x190">
+	<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%=u item.address %>&zoom=6&sensor=false&size=399x230&markers=<%=u item.address %>">
 </div>
 <div id="static2">
-	<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%=u item.address %>&zoom=8&sensor=false&size=250x150">
+	<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%=u item.address %>&zoom=8&sensor=false&size=399x230&markers=<%=u item.address %>">
 </div>
 <div id="address">
 	<p><%= item.address %></p>

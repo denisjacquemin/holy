@@ -34,7 +34,7 @@
 					
 					section {
 						float: left;
-						width: 580px;
+						width: $desktop-section-width;
 						margin: 0 10px 0 0;
 						padding: 0 10px 0 20px;
 						background: white;
@@ -64,7 +64,7 @@
 						}
 					}
 					div#sidebar {
-						width: 290px;
+						width: $desktop-sidebar-width;
 						float: left;
 						padding: 10px 20px 10px 10px;
 						> div {
@@ -176,27 +176,29 @@
 					height: 400px;
 					position: relative;
 					#interactive {
-						width: 100%;
+						width: 640px;
 						height: 399px;
 						border-bottom: 1px solid #888;
 						z-index: 0;
+						overflow: hidden;
+						
 					}
 					#static1, #static2 {
-						width:249px;
+						width:399px;
 						border-left: 1px solid #888;
-						border-bottom: 1px solid #888;
 						overflow: hidden;
 						position:absolute;
+						border-bottom: 1px solid #888;
 						right:0;
 						z-index: 10;
+						height:199px;
 					}
 					#static1 {
-						height:198px;
 						top: 0;
 					}
 					#static2 {
-						height:150px;
-						top: 199px;
+						
+						top: 200px;
 					}
 					#address {
 						background: rgba(0, 0, 0, 0.699219);
