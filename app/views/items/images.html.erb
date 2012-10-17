@@ -1,22 +1,16 @@
 <header class="edit">
 	<h1>Images</h1>
 </header>
-<table>
-  <tr>
-	<th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<table id="images">
 
 <% @item.images.each do |image| %>
   <tr>
-	<td><%= image.name %></td>
-	<td><%= image_tag image.file_url(:thumb) if image.file? %></td>
-    <td><%= link_to 'Show', image %></td>
-    <td><%= link_to 'Edit', edit_image_path(image) %></td>
-    <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<td class="thumb"><%= image_tag image.file_url(:thumb) if image.file? %></td>
+	<td class="desc">
+		<%= image.name %><br>
+		<%= link_to 'Edit', edit_image_path(image), :class => 'btn btn-small' %>
+		<%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-small' %>
+	</td>
   </tr>
 <% end %>
 </table>

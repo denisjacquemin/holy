@@ -1,4 +1,4 @@
-<header>
+<header style="background:url('<%= @item.images[0].file.url %>')">
 	<h1><%= @item.title %></h1>
 </header>
 
@@ -25,7 +25,8 @@
 			<p>"<br><%= @item.quote %></p>
 		</blockquote>
 	<% end %>
-	<img src="/assets/items/item-3.jpg">
+	<img src="<%= @item.images[1].file.url %>">
+	<aside><%= @item.images[1].name %></aside>
 </div>
 
 <div id="fields">
@@ -52,4 +53,9 @@
 			<p>We had a brilliant stay in De Hoedenmaker. It's situated in a great location near to the city centre and a short stroll from a number of shops and restaurants. The house itself is full of character and really well equiped with everything that you'd need for your stay. The owner, Francis, was really helpful and gave us a thorough introdution to Bruges. I'd certainly advise anyone visiting Bruges to stay at De Hoedenmaker.</p>
 		</li>
 	</ul>
+</div>
+<div id="images">
+	<% @item.images.each do |image| %>
+		<div><%= image_tag image.file_url(:normal) if image.file? %></div>
+	<% end %>
 </div>

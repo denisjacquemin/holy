@@ -15,7 +15,7 @@
 				header {
 					margin: 0;
 					padding: 50px 20px;
-					background: url('/assets/items/item-1.jpg');
+					// background: url('/assets/items/item-1.jpg');
 					background-size: 100%;
 					h1 {
 						background: url('/assets/bg-title.png');
@@ -149,6 +149,18 @@
 							
 						}
 					}
+					aside {
+						position: absolute;
+						bottom:0;
+						right:0;
+						color: white;
+						background: black;
+						height: 20px;
+						font-family: $font-helvetica;
+						font-size: 13px;
+						padding: 5px 15px;
+						height: 13px;
+					}
 				}
 				
 				div#fields {
@@ -254,13 +266,19 @@
 								font-family: $font-helvetica;
 							}
 						}
-					}
-					
-					
-					
-					
+					}	
 				}
-				
+				div#images {
+					> div {
+						float:left;
+						width:50%;
+						
+						img {
+							padding: 5px;
+							border: 1px solid #bbb;
+						}
+					}
+				}
 				
 			}
 			
