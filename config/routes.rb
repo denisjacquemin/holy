@@ -1,5 +1,12 @@
 Holiday::Application.routes.draw do
-  resources :items
+  resources :images
+
+  #resources :images, :only => [:create, :update, :destroy]
+  resources :items do
+    member do
+      get 'images'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

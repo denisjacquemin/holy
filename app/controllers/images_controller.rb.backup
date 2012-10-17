@@ -1,0 +1,29 @@
+class ImagesController < ApplicationController
+
+  def create
+    @image = Image.new(params[:image])
+    if @image.save
+      flash[:notice] = "Successfully created image."
+      redirect_to @image.gallery
+    else
+      render :action => 'new'
+    end
+  end
+
+  def update
+    @image = Image.find(params[:id])
+    if @image.update_attributes(params[:image])
+      flash[:notice] = "Successfully updated image."
+      redirect_to @image.gallery
+    else
+      render :action => 'edit'
+    end
+  end
+
+  def destroy
+    @image = image.find(params[:id])
+    @image.destroy
+    flash[:notice] = "Successfully destroyed image."
+    redirect_to @image.gallery
+  end
+end

@@ -2,8 +2,6 @@
 @import 'utils';
 @import 'settings';
 @import 'form';
-@import 'index-responsive-phone';
-@import 'index-responsive-desktop';
-@import 'index-responsive-widescreen';
-@import 'details-responsive-desktop';
-@import 'details-edit-responsive-desktop';
+@import 'responsive/desktop/DESKTOP';
+@import 'responsive/phone/PHONE';
+@import 'responsive/widescreen/WIDESCREEN';

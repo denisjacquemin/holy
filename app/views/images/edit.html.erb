@@ -1,0 +1,8 @@
+<header class="edit">
+	<h1>Editing Image</h1>
+</header>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @image %> |
+<%= link_to 'Back', images_item_path(:id => @image.item_id) %>

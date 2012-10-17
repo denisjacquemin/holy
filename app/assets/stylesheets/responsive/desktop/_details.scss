@@ -1,4 +1,3 @@
-@media #{$breakpoint-desktop}  {
 	body {
 		img#bg { @include full-screen; }
 		div#page {
@@ -153,7 +152,7 @@
 				}
 				
 				div#fields {
-					background: $black-2;
+					background: $black-2 url('/assets/pattern.png');
 					margin: 0;
 					padding: 20px 0;
 					h2 {
@@ -267,4 +266,3 @@
 			
 		}
 	}
-}

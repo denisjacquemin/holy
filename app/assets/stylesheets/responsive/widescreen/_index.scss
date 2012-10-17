@@ -1,0 +1,16 @@
+body {
+	div#page {
+		width: 1285px;
+		div#content {
+			ul#results {
+				width: 1035px;
+				float: left;
+				li {
+					float: left;
+					width: 325px;
+					margin: 10px;
+				}
+			}
+		}
+	}
+}

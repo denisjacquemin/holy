@@ -26,17 +26,16 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @item.highlights.build
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @item }
-    end
+    
+    @image = Image.new
   end
 
   # GET /items/1/edit
   def edit
     @item = Item.find(params[:id])
     @item.highlights.build
+    
+    @image = Image.new(:item_id => params[:id])
   end
 
   # POST /items
@@ -81,5 +80,9 @@ class ItemsController < ApplicationController
       format.html { redirect_to items_url }
       format.json { head :no_content }
     end
+  end
+  
+  def images
+    @item = Item.find(params[:id])
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121004054051) do
+ActiveRecord::Schema.define(:version => 20121006125944) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(:version => 20121004054051) do
     t.string   "content"
     t.integer  "item_id"
     t.integer  "sort"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "images", :force => true do |t|
+    t.string   "name"
+    t.string   "file"
+    t.integer  "item_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

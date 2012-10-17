@@ -1,0 +1,20 @@
+<header class="edit">
+	<h1>Images</h1>
+</header>
+<table id="images">
+
+<% @images.each do |image| %>
+  <tr>
+	<td><%= image_tag image.file_url(:thumb) if image.file? %></td>
+	<td><%= image.name %></td>
+	
+    <td><%= link_to 'Show', image %></td>
+    <td><%= link_to 'Edit', edit_image_path(image) %></td>
+    <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Image', new_image_path(:item_id => @item) %>

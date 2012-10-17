@@ -1,0 +1,6 @@
+@media #{$breakpoint-desktop}  {
+	@import 'index';
+	@import 'details';
+	@import 'details-edit';
+	@import 'details-images';
+}
