@@ -1,5 +1,7 @@
 Holiday::Application.routes.draw do
-  resources :images
+  resources :images do
+    collection { post :sort }
+  end
 
   #resources :images, :only => [:create, :update, :destroy]
   resources :items do

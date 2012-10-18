@@ -269,6 +269,7 @@
 					}	
 				}
 				div#images {
+					@include clearfix;
 					> div {
 						float:left;
 						width:50%;

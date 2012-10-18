@@ -29,9 +29,7 @@
 	<aside><%= @item.images[1].name %></aside>
 </div>
 
-<div id="fields">
-	<%= render 'show_fields' %>
-</div>
+
 <div id="maps">
 	<%= render :partial => 'show_maps', :locals => {:item => @item} %>
 </div>
@@ -58,4 +56,7 @@
 	<% @item.images.each do |image| %>
 		<div><%= image_tag image.file_url(:normal) if image.file? %></div>
 	<% end %>
+</div>
+<div id="fields">
+	<%= render 'show_fields' %>
 </div>

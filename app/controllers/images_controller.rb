@@ -2,7 +2,7 @@ class ImagesController < ApplicationController
   # GET /images
   # GET /images.json
   def index
-    @images = Image.all
+    @images = Image.order('position')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -79,5 +79,12 @@ class ImagesController < ApplicationController
       format.html { redirect_to images_url }
       format.json { head :no_content }
     end
+  end
+  
+  def sort
+    params[:image].each_with_index do |id, index|
+      Image.update_all({position: index+1}, {id: id})
+    end
+    render nothing: true
   end
 end
