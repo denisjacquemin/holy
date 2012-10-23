@@ -1,4 +1,4 @@
-<header style="background:url('<%= @item.images[0].file.url %>')">
+<header style="background:url('<%= @item.images[0].file.url unless @item.images.empty? %>')">
 	<h1><%= @item.title %></h1>
 </header>
 
@@ -18,17 +18,17 @@
 		<% #render 'contact_owner_form' %>
 	</div>
 </div>
-
+<% if @item.images.size >= 2 %>
 <div class="img-separator">
 	<% unless @item.quote.empty? %>
 		<blockquote>
 			<p>"<br><%= @item.quote %></p>
 		</blockquote>
 	<% end %>
-	<img src="<%= @item.images[1].file.url %>">
+	<img src="<%= @item.images[1].file.url  %>">
 	<aside><%= @item.images[1].name %></aside>
 </div>
-
+<% end %>
 
 <div id="maps">
 	<%= render :partial => 'show_maps', :locals => {:item => @item} %>

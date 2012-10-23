@@ -1,0 +1,8 @@
+<%= content_tag_for :li, image do %>
+	<div class="handle">[drag]</div>
+	<div class="thumb"><%= image_tag image.file_url(:thumb) if image.file? %></div>
+	<div class="desc">
+		<%= image.name %><br>
+		<%= link_to 'Edit', edit_image_path(image), :class => 'btn btn-small' %>
+		<%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-small' %>
+<% end %>
