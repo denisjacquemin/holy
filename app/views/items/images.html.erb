@@ -3,7 +3,7 @@
 </header>
 <ul id="images" data-update-url="<%= sort_images_url %>">
 
-<% @item.images.order('position').each do |image| %>
+<% @item.images.each do |image| %>
 	<%= content_tag_for :li, image do %>
 		<div class="handle">[drag]</div>
 		<div class="thumb"><%= image_tag image.file_url(:thumb) if image.file? %></div>
