@@ -24,3 +24,4 @@ jQuery ->
     stop: (e) ->
       $('#upload-progress').hide()
       $('#upload-progress').find('.bar').css('width', '0%')
+  $('.best_in_place').best_in_place()
