@@ -10,6 +10,9 @@ gem 'sqlite3'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'acts_as_list'
+gem 'best_in_place'
+
+gem 'ajaxful_rating' , '>= 3.0.0.beta7'
 
 # Gems used only for assets and not required
 # in production environments by default.
