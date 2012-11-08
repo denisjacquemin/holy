@@ -21,6 +21,11 @@
 		<div id="page">
 			<header>
 				<img id="logo" src="/assets/logo.jpg">
+				<p class="notice"><%= notice %></p>
+				<p class="alert"><%= alert %></p>
+				<% if user_signed_in? %>
+					<%= link_to 'logout', logout_url %>
+				<% end %>
 			</header>
 			<div id="content">
 				<%= yield %>
