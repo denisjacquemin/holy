@@ -3,6 +3,6 @@
 	<div class="thumb"><%= image_tag image.file_url(:thumb) if image.file? %></div>
 	<div class="desc">
 		<%= best_in_place image, :name %><br>
-		<%= link_to 'Edit', edit_image_path(image), :class => 'btn btn-small' %>
-		<%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-small' %>
+		<%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-small btn-danger' %>
+	</div>
 <% end %>

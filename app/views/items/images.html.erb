@@ -1,23 +1,36 @@
-<header class="edit">
-	<h1>Images</h1>
+<header style="background:url('<%= @item.images[0].file.url unless @item.images.empty? %>')">
+	<h1>Manage Images</h1>
 </header>
 
-<%= form_for Image.new do |f| %>
-	<%= f.label :file, 'Uploading Image(s)' %>
-	<%= hidden_field_tag :item, @item.id, name: "image[item_id]" %>
-	<%= f.file_field :file, multiple: true, name: "image[file]" %>
-<% end %>
-
-<div id="upload-progress" style="display:none" class="progress progress-striped active">
-  <div class="progress"><div class="bar" style="width: 0%"></div></div>
+<% unless @item.images.empty? %>
+  <div id="upload">
+  <%= form_for Image.new do |f| %>
+  	<%= f.label :file, 'Uploading Image(s)' %>
+  	<%= hidden_field_tag :item, @item.id, name: "image[item_id]" %>
+  	<%= f.file_field :file, multiple: true, name: "image[file]" %>
+  <% end %>
+  <div id="upload-progress" style="display:none" class="progress progress-striped active">
+    <div class="progress"><div class="bar" style="width: 0%"></div></div>
+  </div>
 </div>
-
-<ul id="images" data-update-url="<%= sort_images_url %>">
-
-<% @item.images.each do |image| %>
-	<%= render partial: 'image', locals: {image: image} %>
+  <ul id="images" data-update-url="<%= sort_images_url %>">
+	<% @item.images.each do |image| %>
+		<%= render partial: 'image', locals: {image: image} %>
+	<% end %>
+  </ul>
+<% else %>
+  <p>No images yet</p>
+  <div>
+	<%= form_for Image.new do |f| %>
+	  	<%= f.label :file, 'Uploading Image(s)' %>
+	  	<%= hidden_field_tag :item, @item.id, name: "image[item_id]" %>
+	  	<%= f.file_field :file, multiple: true, name: "image[file]" %>
+	<% end %>
+  </div>
+  <div>Or</div>
+  <div>Drag and drop files here</div>
 <% end %>
-</ul>
+
 
 <script id="template-upload" type="text/x-tmpl">
 <div class="upload" id="{%=o.id%}">
