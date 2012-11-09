@@ -1,0 +1,17 @@
+#main.login {
+	form {
+		width: 300px;
+		margin: 20px auto;
+		input[type="email"], input[type="password"] {
+			width: 100%;
+		}
+		#rememberme {
+			font-size: 14px;
+			height: 30px;
+			line-height: 30px;
+			input {
+				margin: 0;
+			}
+		}
+	}
+}

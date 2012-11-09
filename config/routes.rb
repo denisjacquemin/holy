@@ -4,6 +4,7 @@ Holiday::Application.routes.draw do
     get "login", :to => "devise/sessions#new"
     get "logout", :to => "devise/sessions#destroy"
     get "register", :to => "devise/registrations#new"
+    get "i-lost-my-password", :to => "devise/passwords#new", :as => 'lostpassword'
   end
 
   devise_for :users
