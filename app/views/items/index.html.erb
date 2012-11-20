@@ -1,10 +1,12 @@
 <%= render 'filters' %>
-<ul id="results">
-	<% @items.each do |item| %>
-		<li>			
-			<%= link_to( render(:partial => 'item', :locals => { :item => item }), item ) %>
-		</li>  
-	<% end %>
-</ul>
+<div id="results">
+	<ul>
+		<% @items.each do |item| %>
+			<li>
+				<%= link_to( render(:partial => 'item', :locals => { :item => item }), item ) %>
+			</li>
+		<% end %>
+	</ul>
+</div>
 
 <%= link_to 'New Item', new_item_path %>

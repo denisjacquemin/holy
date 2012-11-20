@@ -1,0 +1,128 @@
+#page {
+	width: $page-width;
+	margin: 0 auto;
+	border: 1px solid $grey;
+	border-width: 0 1px 1px 1px;
+	//border-radius: 9px;
+	font-family: $font-helvetica;
+	@include clearfix;
+	
+	nav {
+		background: $light-grey;
+		width: 249px;
+		float: left;
+		border-right: 1px solid $grey;
+		
+		h2 {
+			margin: 5px 15px;
+			color: #393c3d;
+			font-weight: bold;
+			font-size: 20px;
+			padding: 10px 0;
+		}
+		
+		h3 {
+			line-height: 18px;
+			color: #393c3d;
+			font-weight: bold;
+			padding: 5px 33px 5px 15px;
+			border: 1px solid $grey;
+			border-width: 1px 0;
+			font-size: 14px;
+			background: 
+			#d9d9d5;
+			background: -webkit-gradient(linear, center top, center bottom, from(#ebebe6), to(#d9d9d5));
+			background: -moz-linear-gradient(top, #ebebe6, #d9d9d5);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebe6', endColorstr='#ffd9d9d5', GradientType=0);
+			cursor: pointer;
+		}
+		
+		
+		ul {
+			padding: 8px 0;
+		}
+		
+		li {
+			line-height: 18px;
+			height: 18px;
+			margin: 0 0 5px 18px;
+			padding: 0;
+			a {
+				font-size: 13px;
+				color: $filters-color;
+				font-weight: normal;
+				line-height: 18px;
+				height: 18px;
+				margin: 0 0 0 8px;
+				
+			}
+			input[type='checkbox'] {
+				background: #ffffff;
+				-webkit-appearance: none;
+				height: 1em;
+				width: 1em;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				margin: 0;
+			}
+		}
+	}
+	
+	div#results {
+		float: left;
+		width: 725px;
+		margin: 0 0 0 5px;
+
+		ul {
+			margin: 20px 0 0 0;
+			li {
+				border-bottom: 1px solid #D8D8D8;
+				padding: 0;
+				@include clearfix;
+				img{
+					width: 145px;
+					height: 100px;
+					margin: 2px 0;
+				}
+				div {
+					float:left;
+					&.desc {
+						width: 470px;
+						margin: 0 0 0 5px;
+						padding: 2px 0 0 0;
+						div.title{
+							color: $dark-blue;
+							font-weight: bold;
+							font-size: 18px;
+						}
+						
+						div.description {
+							color: $filters-color;
+							font-size: 14px;
+						}
+					}
+					&.price {
+						width: 95px;
+						text-align: right;
+						padding: 10px 10px 0 0;
+						color: $orange;
+						font-size: 30px;
+						sup {
+							font-size: 18px;
+							display: inline;
+						}
+						span {
+							font-size: 13px;
+							color: $grey;
+							display: block;
+							margin: 3px 0 0 0;
+						}
+					}
+				}
+				
+				
+			}
+		}
+	}
+}

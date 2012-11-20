@@ -1,4 +1,9 @@
-<%= image_tag 'items/item-1.jpg' %>
-<p>
-	<%= item.title %>
-</p>
+<div><% unless item.images.empty? %><%= image_tag (item.images[0].file.url) %><%end%></div>
+<div class="desc">
+	<div class="title"><%= item.title %></div>
+	<div class="description"><%= item.description.truncate(150) %></div>
+</div>
+<div class="price">
+	<sup>$</sup><%= item.price %>
+	<span>Per week</span>
+</div>

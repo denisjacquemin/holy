@@ -16,17 +16,34 @@
 		<title>Escape</title>
   	</head>
 	<body>
+		<!--
 		<div id="bg-fade"></div>
 		<img id="bg" src="/assets/bg.jpg">
+		-->
+		<header>
+			<%= link_to image_tag('logoo.jpg'), root_url, :id => 'logo' %>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="#">Help</a></li>
+				<li class="divider-vertical"></li>
+				<li><a href="#">Selection</a></li>
+			</ul>
+		</header>
+		<div id="search">
+			<input type="text" id="location">
+			<input type="text" id="checkin">
+			<input type="text" id="checkout">
+			<select  id="sleeps"></select>
+		</div>
+<!--
+		<% if user_signed_in? %>
+			<%= link_to 'logout', logout_url %>
+		<% end %>
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+-->
 		<div id="page">
-			<header>
-				<img id="logo" src="/assets/logoo.jpg">
-				<p class="notice"><%= notice %></p>
-				<p class="alert"><%= alert %></p>
-				<% if user_signed_in? %>
-					<%= link_to 'logout', logout_url %>
-				<% end %>
-			</header>
 			<div id="content">
 				<%= yield %>
 			</div>
