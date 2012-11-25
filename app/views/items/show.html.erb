@@ -1,3 +1,8 @@
+<div id="top">
+	back to results
+</div>
+<div id="page">
+	<div id="content">
 <header style="background:url('<%= @item.images[0].file.url unless @item.images.empty? %>')">
 	<h1><%= @item.title %></h1>
 </header>
@@ -13,8 +18,8 @@
 		<%= raw @item.description %>
 	</section>
 	<div id="sidebar">
-		<% # render 'deal' %>
-		<%= render 'admin' %>
+		<%= render 'deal' %>
+		<% # render 'admin' %>
 		<% #render 'contact_owner_form' %>
 	</div>
 </div>
@@ -27,6 +32,11 @@
 	<% end %>
 	<img src="<%= @item.images[1].file.url  %>">
 	<aside><%= @item.images[1].name %></aside>
+	<ul id="thumbs">
+		<% @item.images.each do |image| %>
+			<li><%= image_tag image.file_url(:thumb) if image.file? %></li>
+		<% end %>
+	</ul>
 </div>
 <% end %>
 
@@ -52,11 +62,8 @@
 		</li>
 	</ul>
 </div>
-<div id="images">
-	<% @item.images.each do |image| %>
-		<div><%= image_tag image.file_url(:normal) if image.file? %></div>
-	<% end %>
-</div>
 <div id="fields">
 	<%= render 'show_fields' %>
+</div>
+</div>
 </div>

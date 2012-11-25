@@ -1,79 +1,64 @@
-header {
-	background: -moz-linear-gradient(top, #fff 0%, #f9f9f9 50%, #f1f1f1 50.1%, #efefef 100%);
-	background: -webkit-linear-gradient(top, #fff 0%, #f9f9f9 50%, #f1f1f1 50.1%, #efefef 100%);
-	background: -moz-linear-gradient(top, #fff 0%, #f9f9f9 50%, #f1f1f1 50.1%, #efefef 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffefefef', GradientType=0);
-	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.1),inset 0 0 5px 2px #fff,0 0 0 #000;
-	-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.1),inset 0 0 5px 2px #fff,0 0 0 #000;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.1),inset 0 0 5px 2px #fff,0 0 0 #000;
-	margin: 0 0 20px 0;
-	height: 45px;
-	text-align: center;
-	ul {
-		display: inline;
-		margin: 0;
-		li {
+body {
+	font-family: $font-helvetica;
+
+
+	> header {
+		width: $page-width;
+		margin: 0 auto 20px auto;
+		height: 45px;
+		@include clearfix;
+		
+		#logo {
 			float: left;
-			display: block;
-			height: 30px;
-			margin: 7px 0 0 0;
-			a {
-				font-size: 12px;
-				font-weight: bold;
-				color: $black;
-				line-height: 30px;
-				padding: 10px 10px;
-				&:hover {
-					color: black;
-					text-decoration:none;
+			display:block;
+			margin: 10px 0 0 0;
+		}
+		
+		ul {
+			display: inline;
+			margin: 0;
+			float:right;
+			li {
+				float: left;
+				display: block;
+				height: 30px;
+				margin: 7px 0 0 0;
+				a {
+					font-size: 12px;
+					font-weight: bold;
+					color: $black;
+					line-height: 30px;
+					padding: 10px 10px;
+					&:hover {
+						color: black;
+						text-decoration:none;
+					}
+				}
+				&.divider-vertical {
+					height: 30px;
+					width: 1px;
+					margin: 5px 3px 5px 4px;
+					overflow: hidden;
+					border-right: 1px solid #fff;
+					background-color: #ddd;
+					background-image: -webkit-linear-gradient(top, #fff 0%, #ddd 30%, #ddd 70%, #fff 100%);
+					background-image: -moz-linear-gradient(top, #fff 0%, #ddd 30%, #ddd 70%, #fff 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdddddd', GradientType=0);
 				}
 			}
-			&.divider-vertical {
-				height: 30px;
-				width: 1px;
-				margin: 5px 3px 5px 4px;
-				overflow: hidden;
-				border-right: 1px solid #fff;
-				background-color: #ddd;
-				background-image: -webkit-linear-gradient(top, #fff 0%, #ddd 30%, #ddd 70%, #fff 100%);
-				background-image: -moz-linear-gradient(top, #fff 0%, #ddd 30%, #ddd 70%, #fff 100%);
-				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdddddd', GradientType=0);
-			}
 		}
-	}
-	ul#primary {
-		margin: 0 0 0 40px;
-	}
-}
-
-div#search {
-	padding: 10px 0;
-	margin: 20px 0 0 0;
-	width: 100%;
-	background: $blue;
-	border: 1px solid $dark-blue;
-	border-width: 1px 0;
-	text-align: center;
-	box-shadow: rgb(184, 184, 184) 0px 1px 3px 0px;
-	
-	input {
-		border: none;
-		height: 40px;
-		font-size: 23px;
-		padding: 2px 5px;
-		margin: 0 10px 0 0;
-		border: 1px solid $dark-blue;
-		&#location {
-			width: 450px;
-		}
-		&#checkin, &#checkout {
-			width: 100px;
+		ul#primary {
+			margin: 0 0 0 40px;
 		}
 	}
 	
-	select#sleeps {
-		border:none;
-		width: 150px;
-		height: 30px;
+	#page {
+		width: $page-width;
+		margin: 0 auto;
+		border: 1px solid $grey;
+		border-width: 0 1px 1px 1px;
+		//border-radius: 9px;
+		
+		@include clearfix;
 	}
 }

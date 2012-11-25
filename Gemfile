@@ -15,6 +15,7 @@ gem 'best_in_place'
 #gem 'ajaxful_rating' , '>= 3.0.0.beta7'
 
 gem 'devise'
+gem 'omniauth-facebook'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,26 +1,32 @@
-<header>
-	<h1>Login</h1>
-</header>
-<div id="main" class="login">
-	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-	  <div>
-		<%= f.label :email %>
-	  	<%= f.email_field :email %>
-	  </div>
-
-	  <div>
-	   	<%= f.label :password %>
-	  	<%= f.password_field :password %>
-	  </div>
-
-	  <% if devise_mapping.rememberable? -%>
-	    <div id="rememberme"><%= f.check_box :remember_me %> Remember me</div>
-	  <% end -%>
-
-	  <div><%= f.submit "Sign in" %></div>
-	<% end %>
-
-	<%= render "devise/shared/links" %>
+<div id="page">
+	<div id="content">
+		<header>
+			<h1>Login</h1>
+		</header>
+		<div id="main" class="login">
+			<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+			
+			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+			  <div>
+				<%= f.label :email %>
+			  	<%= f.email_field :email %>
+			  </div>
+		
+			  <div>
+			   	<%= f.label :password %>
+			  	<%= f.password_field :password %>
+			  </div>
+		
+			  <% if devise_mapping.rememberable? -%>
+			    <div id="rememberme"><%= f.check_box :remember_me %> Remember me</div>
+			  <% end -%>
+		
+			  <div><%= f.submit "Sign in" %></div>
+			<% end %>
+		
+			<%= render "devise/shared/links" %>
+		</div>
+	</div>
 </div>
 
 

@@ -21,35 +21,28 @@
 		<img id="bg" src="/assets/bg.jpg">
 		-->
 		<header>
-			<%= link_to image_tag('logoo.jpg'), root_url, :id => 'logo' %>
+			<%= #link_to image_tag('logoo.jpg'), root_url, :id => 'logo' 
+			%>
+			<%= link_to 'toto', root_url, :id => 'logo' %>
 			<ul>
-				<li><a href="#">Home</a></li>
+				<% if user_signed_in? %>
+					<li>Welcome <%= current_user.name %></li>
+					<li><%= link_to 'logout', logout_url %></li>
+				<% else %>
+					<li><%= link_to image_tag('login-facebook.png'), user_omniauth_authorize_path(:facebook) %></li>
+				<% end %>
 				<li class="divider-vertical"></li>
 				<li><a href="#">Help</a></li>
 				<li class="divider-vertical"></li>
 				<li><a href="#">Selection</a></li>
 			</ul>
 		</header>
-		<div id="search">
-			<input type="text" id="location">
-			<input type="text" id="checkin">
-			<input type="text" id="checkout">
-			<select  id="sleeps"></select>
-		</div>
+		
 <!--
-		<% if user_signed_in? %>
-			<%= link_to 'logout', logout_url %>
-		<% end %>
 		<p class="notice"><%= notice %></p>
 		<p class="alert"><%= alert %></p>
 -->
-		<div id="page">
-			<div id="content">
 				<%= yield %>
-			</div>
-			<footer>
-				links
-			</footer>
-		</div>
+			
 	</body>
 </html>

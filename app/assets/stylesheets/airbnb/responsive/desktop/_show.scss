@@ -1,0 +1,287 @@
+body {
+	
+	div#top {
+		width: $page-width;
+		margin: 0 auto;
+		@include clearfix;
+	}
+	div#page {
+		
+		header {
+			border-top: 5px solid $blue;
+		}
+		
+		div#content {
+			@include clearfix;
+			background: white;
+			padding: 0;
+			color: $almost-black;
+			
+			header {
+				margin: 0;
+				padding: 50px 20px;
+				// background: url('/assets/items/item-1.jpg');
+				background-size: 100%;
+				h1 {
+					background: url('/assets/bg-title.png');
+					font-size: 36px;
+					color: white;
+					padding: 20px;
+					width: 70%;
+					border-radius: 8px;
+				}
+			}
+			
+			div#main {
+				@include clearfix;
+				background: white;
+				
+				section {
+					float: left;
+					width: $desktop-section-width;
+					margin: 0 10px 0 0;
+					padding: 0 10px 0 20px;
+					background: white;
+					
+					h2 {
+						font-size: 24px;
+						margin: 25px 0 15px 0;
+					}
+					ul, p {
+						font-family: $font-helvetica;
+						font-size: 14px;
+					}
+
+					ul.bullets {
+						margin: 10px 0;
+						li {
+							border-bottom: 1px solid #d9d9da;
+							padding: 7px 3px 7px 15px;
+						}
+					}
+
+					
+
+					p {
+						line-height: 18px;
+						margin: 0 0 25px 0;
+					}
+				}
+				div#sidebar {
+					width: $desktop-sidebar-width;
+					float: left;
+					padding: 10px 20px 10px 10px;
+					> div {
+						border-radius: 4px;
+						-webkit-background-clip: padding-box;
+						background: white;
+						border: 1px solid #bbb;
+						padding: 10px;
+						
+						li {
+							display:block;
+							text-align: center;
+						}
+
+						li#price {
+							color: $orange;
+							font-size: 44px;
+							height:54px;
+							line-height:54px;
+							margin: 10px 0 0 0;
+						}
+						li#original-price {
+							font-family: $font-helvetica;
+							font-size: 13px;
+							color: $almost-black;
+							margin: 10px 0;
+						}
+						li#bookit {
+							text-align: center;
+							margin: 30px 0;
+						}
+						ul#metas li {
+							font-family: $font-helvetica;
+							font-size: 12px;
+							color: rgb(128, 130, 133);
+							margin: 0;
+							padding: 10px 0;
+							color: $soft-grey;
+							border-top: 1px solid #d9d9d9;
+							text-transform: uppercase;
+							
+							&:first-child{
+								border-top:none;
+							}
+						}
+					}
+				}
+			}
+			
+			.img-separator {
+				margin: 0;
+				position: relative;
+				
+				overflow: hidden;
+				> img {
+					width: 100%;
+					float: left;
+					max-width: 250px;
+				}
+				blockquote {
+					position: absolute;
+					background: rgba(0, 0, 0, 0.8);
+					top: 20px;
+					left: 20px;
+					border-radius: 50%;
+					z-index: 100;
+					width: 324px;
+					min-height: 324px;
+					
+					
+					span, p {
+						font-family: $font-swanky;
+						color: #fff;
+					}
+					
+					p {
+						padding: 35px 50px;
+						font-size: 24px;
+						line-height: 36px;
+						text-align: center;
+						width: 224px;
+						letter-spacing: 2px;
+						
+					}
+				}
+				aside {
+					position: absolute;
+					bottom:0;
+					right:0;
+					color: white;
+					background: rgba(0, 0, 0, 0.699219);
+					height: 20px;
+					font-family: $font-helvetica;
+					font-size: 13px;
+					padding: 10px 15px;
+					height: 13px;
+				}
+				#thumbs {
+					height: 120px;
+					max-height: 120px;
+					li {
+						float: left;
+						height: 120px;
+						max-height: 120px;
+					}
+				}
+			}
+			
+			div#fields {
+				background: $black-2 url('/assets/pattern.png');
+				margin: 0;
+				padding: 20px 0;
+				h2 {
+					font-size: 24px;
+					margin: 10px 0 15px 5%;
+					color: white;
+				}
+				table {
+					background: white;
+					margin: 0 5%;
+					width: 90%;
+					td {
+						font-size: 13px;
+					}
+				}
+			}
+			
+			div#maps {
+				@include clearfix;
+				height: 400px;
+				position: relative;
+				#interactive {
+					width: 640px;
+					height: 399px;
+					border-bottom: 1px solid #888;
+					z-index: 0;
+					overflow: hidden;
+					
+				}
+				#static1, #static2 {
+					width:399px;
+					border-left: 1px solid #888;
+					overflow: hidden;
+					position:absolute;
+					border-bottom: 1px solid #888;
+					right:0;
+					z-index: 10;
+					height:199px;
+				}
+				#static1 {
+					top: 0;
+				}
+				#static2 {
+					
+					top: 200px;
+				}
+				#address {
+					background: rgba(0, 0, 0, 0.699219);
+					height: 40px;
+					width: auto;
+					display: inline;
+					float: left;
+					bottom: 40px;
+					position: absolute;
+					p {
+						color: #fff;
+						font-family: $sans-serif;
+						font-size: 12px;
+						padding: 0 20px;
+						line-height: 40px;
+						height: 40px;
+					}
+				}
+			}
+			
+			div#reviews {
+				
+				margin: 0 20px;
+				
+				h2 {
+					font-size: 24px;
+					margin: 10px 0 0 0;
+					color: black;
+				}
+				
+				ul {
+					padding: 0;
+					li {
+						padding: 20px 0;
+						
+						h1 {
+							font-weight:bold;
+							font-size: 18px;
+							margin: 0;
+							height: 18px;
+							line-height: 18px;
+						}
+						span.author, span.location, span.timing {
+							color: $soft-grey;
+							font-size: 12px;
+						}
+						span.timing {
+							display:block;
+							margin: 3px 0;
+						}
+						p {
+							margin: 10px 0;
+							font-size: 14px;
+							font-family: $font-helvetica;
+						}
+					}
+				}	
+			}
+		}
+	}
+}
