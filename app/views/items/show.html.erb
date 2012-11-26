@@ -23,26 +23,8 @@
 		<% #render 'contact_owner_form' %>
 	</div>
 </div>
-<% if @item.images.size >= 2 %>
-<div class="img-separator">
-	<% unless @item.quote.empty? %>
-		<blockquote>
-			<p>"<br><%= @item.quote %></p>
-		</blockquote>
-	<% end %>
-	<img src="<%= @item.images[1].file.url  %>">
-	<aside><%= @item.images[1].name %></aside>
-	<ul id="thumbs">
-		<% @item.images.each do |image| %>
-			<li><%= image_tag image.file_url(:thumb) if image.file? %></li>
-		<% end %>
-	</ul>
-</div>
-<% end %>
-
-<div id="maps">
-	<%= render :partial => 'show_maps', :locals => {:item => @item} %>
-</div>
+<%= render :partial => 'galleria', :locals => {:item => @item} %>
+<%= render :partial => 'show_maps', :locals => {:item => @item} %>
 <div id="reviews">
 	<h2>Reviews</h2>
 	<ul>

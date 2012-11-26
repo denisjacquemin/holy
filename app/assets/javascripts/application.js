@@ -18,4 +18,5 @@
 //= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl
 //= require bootstrap/bootstrap.min
+//= require galleria/galleria-1.2.8.min
 //= require_tree .

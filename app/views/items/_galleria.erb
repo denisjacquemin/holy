@@ -1,0 +1,18 @@
+<% if item.images.size >= 2 %>
+	<div class="img-separator" id="galleria">
+		<% @item.images.each do |image| %>
+	 		<%= link_to image_tag(image.file_url, :alt => image.name, :title => image.name),  image.file_url %>
+		<% end %>
+	</div>
+	<script>
+		Galleria.loadTheme('/assets/galleria/themes/classic/galleria.classic.min.js');
+	
+		Galleria.run('#galleria');
+	</script>
+<% end %>
+
+<% unless item.quote.empty? %>
+	<blockquote>
+		<p>"<br><%= @item.quote %></p>
+	</blockquote>
+<% end %>
