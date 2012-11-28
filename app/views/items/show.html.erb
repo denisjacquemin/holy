@@ -1,3 +1,5 @@
+<% content_for :title do %><%= @item.title -%><% end %>
+<% content_for :image_cover do %><%= @item.images[0].file.url unless @item.images.empty? %><% end %>
 <div id="top">
 	back to results
 </div>
