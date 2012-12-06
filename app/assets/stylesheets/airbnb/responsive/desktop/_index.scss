@@ -13,11 +13,24 @@ div#search {
 		margin: 0 auto;
 	}
 	
-	input {
-		border: none;
-		height: 40px;
+	.location {
 		font-size: 23px;
 		padding: 2px 5px;
+	}
+	
+	input::-webkit-input-placeholder  { 
+		@extend .location; 
+		color: #ccc;
+	 }
+	input::-moz-placeholder { 
+		@extend .location; 
+	}
+	
+	
+	input {
+		@extend .location;
+		border: none;
+		height: 40px;
 		margin: 0 17px 0 0;
 		border: 1px solid $dark-blue;
 		&#location {
@@ -31,7 +44,9 @@ div#search {
 	select#sleeps {
 		border:none;
 		width: 170px;
-		height: 30px;
+		height: 40px;
+		border-radius: none;
+		margin: 0;
 	}
 }
 
