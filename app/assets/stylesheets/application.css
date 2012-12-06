@@ -9,5 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require fonts
+ *= require bootstrap/bootstrap.min
+ *= require galleria/themes/classic/galleria.classic
  *= require airbnb/styles
  */

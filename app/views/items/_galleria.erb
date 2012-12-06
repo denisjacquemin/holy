@@ -6,8 +6,22 @@
 	</div>
 	<script>
 		Galleria.loadTheme('/assets/galleria/themes/classic/galleria.classic.min.js');
-	
+		Galleria.configure({
+			clicknext:true,
+			showInfo: true,
+			_toggleInfo: false,
+			preload:1,
+			touch:true,
+			transition:Galleria.TOUCH?"slide":"fade",
+			transitionSpeed:Galleria.TOUCH?500:300
+			});
+		Galleria.ready(function(options) {
+			$('.galleria-info-title').remove();
+			$('.galleria-image-nav').remove();
+		});
 		Galleria.run('#galleria');
+		$('.galleria-info-title').hide();
+		
 	</script>
 <% end %>
 
@@ -16,3 +30,5 @@
 		<p>"<br><%= @item.quote %></p>
 	</blockquote>
 <% end %>
+
+ 

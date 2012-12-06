@@ -7,7 +7,7 @@ div#search {
 	border: 1px solid $dark-blue;
 	border-width: 1px 0;
 	text-align: center;
-	box-shadow: rgb(184, 184, 184) 0px 1px 3px 0px;
+	box-shadow: rgb(184, 184, 184) 0px 1px 50px 0px;
 	> div {
 		width: $page-width;
 		margin: 0 auto;
@@ -21,7 +21,7 @@ div#search {
 		margin: 0 17px 0 0;
 		border: 1px solid $dark-blue;
 		&#location {
-			width: 470px;
+			width: 467px;
 		}
 		&#checkin, &#checkout {
 			width: 120px;
@@ -79,7 +79,7 @@ div#search {
 			margin: 0 0 5px 18px;
 			padding: 0;
 			a {
-				font-size: 13px;
+				font-size: 12px;
 				color: $filters-color;
 				font-weight: normal;
 				line-height: 18px;
@@ -87,20 +87,12 @@ div#search {
 				margin: 0 0 0 8px;
 				
 			}
-			input[type='checkbox'] {
-				background: #ffffff;
-				-webkit-appearance: none;
-				height: 1em;
-				width: 1em;
-				-webkit-border-radius: 3px;
-				-moz-border-radius: 3px;
-				border-radius: 3px;
-				margin: 0;
-			}
+			
 			span.counter {
-				position: relative;
-				right: 0;
+				float: right;
+				margin: 0 10px 0 0;
 				font-size: 13px;
+				color: $grey;
 			}
 		}
 	}

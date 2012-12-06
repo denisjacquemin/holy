@@ -1,0 +1,12 @@
+#main.login {
+	@include clearfix;
+	#sidebar {
+		float: left;
+		width: 280px;
+	}
+	
+	#maincontent {
+		float:left;
+		width: 700px;
+	}
+}

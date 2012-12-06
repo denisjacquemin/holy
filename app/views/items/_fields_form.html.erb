@@ -1,13 +1,13 @@
 <% FieldGroup.all.each do |field_group| %>
 	<% unless field_group.fields.empty? %>
 		<fieldset>
-		  <legend><%= field_group.label %></legend>
+		  <h2><%= field_group.label %></h2>
 		  <% field_group.fields.all.each do |field| %>
 		    <div class="field">
-		    	<%= label_tag :field_ids, field.label %>
 		    	<div class="input">
-		    		<%= check_box_tag :field_ids, field.id, @item.fields.include?(field), :name => 'item[field_ids][]' -%>
+		    		<%= check_box_tag field, field.id, @item.fields.include?(field), :name => 'item[field_ids][]' -%>
 		    	</div>
+				<%= label_tag field, field.label %>
 		    </div>
 		  <% end %>
 		</fieldset>

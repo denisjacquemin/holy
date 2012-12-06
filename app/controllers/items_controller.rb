@@ -6,6 +6,9 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
+    #la liste des champs avec un le nombre d'item dedans
+    
+    #{}
 
     respond_to do |format|
       format.html # index.html.erb

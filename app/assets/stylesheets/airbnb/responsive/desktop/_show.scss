@@ -4,6 +4,12 @@ body {
 		width: $page-width;
 		margin: 0 auto;
 		@include clearfix;
+		height: 36px;
+		line-height: 36px;
+		a {
+			padding: 10px 10px 10px 0;
+			color: black;
+		}
 	}
 	div#page {
 		
@@ -71,6 +77,7 @@ body {
 					width: $desktop-sidebar-width;
 					float: left;
 					padding: 10px 20px 10px 10px;
+					background: $light-grey;
 					> div {
 						border-radius: 4px;
 						-webkit-background-clip: padding-box;
@@ -81,6 +88,7 @@ body {
 						li {
 							display:block;
 							text-align: center;
+							font-family: 'arial rounded mt bold', helvetica, arial, sans-serif;
 						}
 
 						li#price {
@@ -89,6 +97,10 @@ body {
 							height:54px;
 							line-height:54px;
 							margin: 10px 0 0 0;
+							.currency {
+								font-size: 14px;
+								padding: -50px 0 0 0;
+							}
 						}
 						li#original-price {
 							font-family: $font-helvetica;
@@ -117,7 +129,6 @@ body {
 					}
 				}
 			}
-			#galleria{height:450px}
 			.img-separator {
 				margin: 0;
 				position: relative;

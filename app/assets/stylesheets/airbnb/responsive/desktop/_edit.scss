@@ -1,0 +1,43 @@
+div#page div#content form.edit_item, div#page div#content form.new_item {
+	
+	div#basics {
+		.row {
+			margin: 10px 20px;
+			input, textarea {
+				width: 500px;
+			}
+			
+			textarea#item_description {
+				height: 150px;
+			}
+			
+			
+		}
+	}
+	
+	div#fields {
+		background: none;
+		fieldset {
+			background: $light-grey;
+			margin: 0 0 30px 0;
+			padding: 10px 20px 20px 20px;
+			border-radius: 9px;
+			h2 {
+				font-weight: bold;
+				font-size: 18px;
+				margin: 0;
+				color: black;
+			}
+			div.field {
+				width: 250px;
+				float:left;
+				div.input, label {
+					display:inline;
+				}
+				div.input {
+					margin: 0 10px 0 0;
+				}
+			}
+		}
+	}
+}
