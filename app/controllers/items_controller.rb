@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.page(params[:page]).per(2)
     #la liste des champs avec un le nombre d'item dedans
     
     #{}

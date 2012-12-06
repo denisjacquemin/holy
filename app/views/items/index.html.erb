@@ -16,6 +16,7 @@
 						<%= link_to( render(:partial => 'item', :locals => { :item => item }), item ) %>
 					</li>
 				<% end %>
+				<%= paginate @items %>
 			</ul>
 		</div>
 	</div>

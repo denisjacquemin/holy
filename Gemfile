@@ -11,6 +11,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'acts_as_list'
 gem 'best_in_place'
+gem 'kaminari'
 
 #gem 'ajaxful_rating' , '>= 3.0.0.beta7'
 
