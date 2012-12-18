@@ -51,17 +51,6 @@ body {
 						width: 160px;
 					}
 				}
-				&.divider-vertical {
-					height: 30px;
-					width: 1px;
-					margin: 5px 3px 5px 4px;
-					overflow: hidden;
-					border-right: 1px solid #fff;
-					background-color: #ddd;
-					background-image: -webkit-linear-gradient(top, #fff 0%, #ddd 30%, #ddd 70%, #fff 100%);
-					background-image: -moz-linear-gradient(top, #fff 0%, #ddd 30%, #ddd 70%, #fff 100%);
-					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdddddd', GradientType=0);
-				}
 				#listyourplace {
 					margin: 3px 0 0 10px;
 					&.btn-warning {

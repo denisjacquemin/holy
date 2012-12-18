@@ -34,10 +34,12 @@ div#search {
 		margin: 0 17px 0 0;
 		border: 1px solid $dark-blue;
 		&#location {
-			width: 467px;
+			width: 430px;
 		}
-		&#checkin, &#checkout {
-			width: 120px;
+		&#range {
+			width: 300px;
+			font-size: 16px;
+			padding-right: 20px;
 		}
 	}
 	

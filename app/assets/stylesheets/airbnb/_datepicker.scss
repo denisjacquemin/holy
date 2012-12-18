@@ -1,0 +1,44 @@
+#range-container {
+	position:relative;
+	display:inline;
+	#datepicker-calendar {
+		display:none;
+		position: absolute;
+		width: 497px;
+		height:153px;
+		background-color: #F7F7F7;
+		margin: 6px 0 0 0;
+		z-index: 100;
+		box-shadow: rgb(0, 0, 0) 0px 1px 10px 0px;
+		border-radius: 4px;
+		padding:10px 0 27px 10px;
+		
+		.btn {
+			position: absolute;
+			bottom: 5px;
+			right: 10px;
+		}
+	}
+	#range {
+		margin: 0 10px 0 0;
+	}
+}
+
+/* Remove default border from the custom widget since we're adding our own.  TBD: rework the dropdown calendar to use the default borders */
+#datepicker-calendar div.datepicker {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* overide default datepicker styles */
+div.datepicker a,
+div.datepicker a:hover {
+  color: #DDDDDD;
+}
+
+
+div.datepicker td.datepickerFuture a {
+  color:black;
+}

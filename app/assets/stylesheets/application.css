@@ -12,5 +12,7 @@
  *= require fonts
  *= require bootstrap/bootstrap.min
  *= require galleria/themes/classic/galleria.classic
+ *= require datepicker/base
+ *= require datepicker/clean
  *= require airbnb/styles
  */

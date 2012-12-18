@@ -1,8 +1,12 @@
 <div id="search">
 	<div>
 		<input type="text" id="location" class="location" placeholder="Where to? Paris, Barcelona, Florence...">
-		<input type="text" id="checkin"  placeholder="From">
-		<input type="text" id="checkout" placeholder="To">
+		<div id="range-container">
+			<input type="text" id="range" placeholder="When? from - to">
+			<div id="datepicker-calendar">
+				<%= link_to 'Ok', '#', :class => 'btn btn-small btn-primary'%>
+			</div>
+		</div>
 		<select  id="sleeps"><option>Howmany sleeps?</select>
 	</div>
 </div>
