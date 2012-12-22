@@ -6,9 +6,6 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.page(params[:page]).per(2)
-    #la liste des champs avec un le nombre d'item dedans
-    
-    #{}
 
     respond_to do |format|
       format.html # index.html.erb
