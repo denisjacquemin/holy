@@ -12,7 +12,6 @@
  *= require fonts
  *= require bootstrap/bootstrap.min
  *= require galleria/themes/classic/galleria.classic
- *= require datepicker/base
- *= require datepicker/clean
+ *= require datepicker/pickadate.01.default
  *= require airbnb/styles
  */

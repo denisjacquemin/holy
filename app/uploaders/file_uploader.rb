@@ -43,6 +43,16 @@ class FileUploader < CarrierWave::Uploader::Base
   version :normal do
      process :resize_to_limit => [450, 450]
   end
+  
+  version :blur do
+     process :blur_me
+  end
+
+  def blur_me
+    manipulate! do |img|
+      img = img.blur_image(0.0, 3.0)
+    end
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
@@ -55,5 +65,4 @@ class FileUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-
 end

@@ -20,6 +20,6 @@
 //= require bootstrap/bootstrap.min
 //= require galleria/galleria-1.2.8.min
 //= require galleria/themes/classic/galleria.classic.min
-//= require datepicker/datepicker
+//= require datepicker/pickadate.legacy.min
 
 //= require_tree .
