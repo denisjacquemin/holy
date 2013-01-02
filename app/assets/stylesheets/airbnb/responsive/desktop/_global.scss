@@ -27,11 +27,11 @@ body {
 			}
 		}
 		
-		ul {
+		> ul {
 			display: inline;
 			margin: 10px 0 0 0;
 			float:right;
-			li {
+			> li {
 				float: left;
 				display: block;
 				height: 30px;
@@ -58,6 +58,32 @@ body {
 						color: rgb(57, 60, 61);
 					}
 				}
+				&.dropdown {
+					.arrow {
+						display: inline-block;
+						width: 0;
+						height: 0;
+						vertical-align: top;
+						border-top: 4px solid #000;
+						border-right: 4px solid transparent;
+						border-left: 4px solid transparent;
+						content: "";
+						margin-top: 12px;
+						margin-left: 2px;
+					}
+					
+					ul {
+						display:none;
+					}
+				}
+					
+				&.dropdown:hover > ul {
+					display: block;
+					background: white;
+					border: 1px solid #aaa;
+					box-shadow: rgb(0, 0, 0) 0px 1px 5px 0px;
+				}
+				
 			}
 		}
 		ul#primary {
