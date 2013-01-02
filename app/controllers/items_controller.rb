@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_filter :authenticate_user!, only: [:edit, :update, :create, :new, :destroy, :images]
+  before_filter :authenticate_user!, only: [:edit, :update, :create, :destroy, :images]
 
   # GET /items
   # GET /items.json
