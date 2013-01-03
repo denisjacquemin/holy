@@ -1,21 +1,26 @@
-<header>
-	<h1>Register</h1>
-</header>
-<div id="main" class="login">
-	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-	  <%= devise_error_messages! %>
-	
-	  <div><%= f.label :email %><br />
-	  <%= f.email_field :email %></div>
-	
-	  <div><%= f.label :password %><br />
-	  <%= f.password_field :password %></div>
-	
-	  <div><%= f.label :password_confirmation %><br />
-	  <%= f.password_field :password_confirmation %></div>
-	
-	  <div><%= f.submit "Sign up" %></div>
-	<% end %>
-	
-	<%= render "devise/shared/links" %>
+<div class="facebook-box">
+	<p>Sign up with Facebook.</p>
+	<p class="comment">It's fast and easy.</p>
+	<%= render :partial => '/devise/shared/facebook_link' %>
+	<p class="comment">We never post without your permission.</p>
+</div>
+<%= image_tag 'or.png' %> 
+<p><a href="#">Sign up using your e-mail address.</a></p>
+<div id="signup-form">
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>
 </div>

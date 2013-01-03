@@ -13,4 +13,13 @@ class Item < ActiveRecord::Base
   accepts_nested_attributes_for :images, 
                                 :allow_destroy => true,
                                 :reject_if => proc { |attributes| attributes['name'].blank? }
+                               
+  validates_uniqueness_of :title
+                                
+  extend FriendlyId
+  friendly_id :friendly_url, use: [:slugged, :history]
+  
+  def friendly_url
+    "#{self.title}"
+  end
 end

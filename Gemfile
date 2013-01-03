@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.10'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -18,6 +18,8 @@ gem 'rmagick'
 gem 'acts_as_list'
 gem 'best_in_place'
 gem 'kaminari'
+gem "friendly_id"
+
 
 #gem 'ajaxful_rating' , '>= 3.0.0.beta7'
 
