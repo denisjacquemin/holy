@@ -18,9 +18,17 @@
   	</div>
   </div>
   <div class="field row">
-    <%= f.label :price %>
-  	<div class="input">
-    	<%= f.text_field :price %>
-  	</div>
+    <div class="col1">
+		<%= f.label :price %>
+  		<div class="input">
+    		<%= f.text_field :price %>
+  		</div>
+	</div>
+	<div class="col2">
+		<%= f.label :sleeps, 'Number of Sleeps' %>
+  		<div class="input">
+    		<%= f.text_field :sleeps %>
+  		</div>
+	</div>
   </div>
 </fieldset>

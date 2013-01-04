@@ -11,7 +11,13 @@ div#page div#content form.edit_item, div#page div#content form.new_item {
 				height: 150px;
 			}
 			
-			
+			.col1, .col2 {
+				width:50%;
+				float:left;
+				input {
+					width: 65%;
+				}
+			}
 		}
 	}
 	
