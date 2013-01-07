@@ -1,0 +1,68 @@
+#place {
+	@include clearfix;
+	width: 1200px;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	#main {
+		float: left;
+		width: 850px;
+	}
+	#sidebar {
+		float: left;
+		width: 330px;
+		margin: 0 10px;
+		-moz-box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px 0px;
+		-webkit-box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px 0px;
+		box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px 0px;
+		border-radius: 3px;
+		> div {
+			border-radius: 4px;
+			-webkit-background-clip: padding-box;
+			background: white;
+			border: 1px solid #bbb;
+			padding: 10px;
+			
+			li {
+				display:block;
+				text-align: center;
+				font-family: 'arial rounded mt bold', helvetica, arial, sans-serif;
+			}
+
+			li#price {
+				color: $orange;
+				font-size: 50px;
+				height:54px;
+				line-height:54px;
+				margin: 10px 0 0 0;
+				.currency {
+					font-size: 14px;
+					padding: -50px 0 0 0;
+				}
+			}
+			li#original-price {
+				font-family: $font-helvetica;
+				font-size: 13px;
+				color: $almost-black;
+				margin: 10px 0;
+			}
+			li#bookit {
+				text-align: center;
+				margin: 30px 0;
+			}
+			ul#metas li {
+				font-family: $font-helvetica;
+				font-size: 12px;
+				color: rgb(128, 130, 133);
+				margin: 0;
+				padding: 10px 0;
+				color: $soft-grey;
+				border-top: 1px solid #d9d9d9;
+				text-transform: uppercase;
+				
+				&:first-child{
+					border-top:none;
+				}
+			}
+		}
+	}
+}

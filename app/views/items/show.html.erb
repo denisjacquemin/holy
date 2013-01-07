@@ -3,6 +3,19 @@
 <div id="top">
 	<%= link_to 'back to results', :back %>
 </div>
+<div id="place">
+	<div id="main">
+		<%= render :partial => 'galleria', :locals => {:item => @item} %>
+		<%= render :partial => 'show_maps', :locals => {:item => @item} %>
+		<%= render :partial => 'reviews', :locals => {:item => @item} %>
+	</div>
+	<div id="sidebar">
+		<%# render 'deal' %>
+		<%# render 'admin' %>
+		<%= render 'contact_owner_form' %>
+	</div>
+<div>
+<!--
 <div id="page">
 	<div id="content">
 		<header style="background:url('<%= @item.images[0].file.url unless @item.images.empty? %>')">
@@ -50,3 +63,4 @@
 		</div>
 	</div>
 </div>
+-->

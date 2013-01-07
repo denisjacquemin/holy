@@ -1,0 +1,40 @@
+#galleria{height:480px}
+.galleria-info {
+	width: 100%;
+	z-index: 2;
+	position: absolute;
+	bottom: 60px;
+	top: auto;
+	left: auto;
+	display:block;
+	background:none;
+	.galleria-info-text {
+		margin: 0 0;
+		padding:0;
+		zoom: 1;
+		background: none;
+		.galleria-info-description {
+			margin: 0;
+			color: 
+			#fff;
+			font-style: italic;
+			text-align: center;
+			padding: 12px;
+			background: rgba(0, 0, 0, 0.7);
+		}
+	}
+}
+
+
+
+.galleria-container {
+	background: white;
+}
+
+.galleria-stage {
+	background: $galleria-background;
+	right: 0;
+	left: 0;
+	top: 0;
+	border-radius: 3px;
+}
