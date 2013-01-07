@@ -1,23 +1,240 @@
-<div id="search">
-	<div>
-		<input type="text" id="location" class="location" placeholder="Where to? Paris, Barcelona, Florence">
-		<input type="text" id="checkin" placeholder="When? from">
-		<input type="text" id="checkout" placeholder="When? to">
-		<select  id="sleeps"><option>Howmany sleeps?</select>
-	</div>
-</div>
-<div id="page">
-	<div id="content">
-		<%= render 'filters' %>
-		<div id="results">
-			<ul>
-				<% @items.each do |item| %>
-					<li>
-						<%= link_to( render(:partial => 'item', :locals => { :item => item }), item ) %>
-					</li>
-				<% end %>
-				<%= paginate @items %>
-			</ul>
-		</div>
-	</div>
+<%= render :partial => 'shared/search' %>
+<div id="places">
+	<%= render 'filters' %>
+	<section id="results">
+		<ul>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-1.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-2.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-3.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-4.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-5.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-6.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-7.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-1.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-2.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-3.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-4.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-5.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-6.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-7.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-1.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-2.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-3.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-4.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-5.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-6.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-7.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-1.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-2.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-3.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-4.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-5.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-6.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>
+			<li class="place">
+				<div>
+					<img src="/assets/temp/Unknown-7.jpg">
+					<aside>
+						Voici une description
+					</aside>
+				</div>
+			</li>	
+		<% @items.each do |item| %>
+			
+			<li class="place">
+				<%= link_to( render(:partial => 'item', :locals => { :item => item }), item ) %>
+			</li>
+		<% end %>
+		
+		</ul>
+		<%= paginate @items %>
+	</section>
 </div>

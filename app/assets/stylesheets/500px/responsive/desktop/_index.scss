@@ -1,0 +1,90 @@
+#places  {
+	@include clearfix;
+	width: 1220px;
+	margin: 0 auto 0 auto;
+	padding: 0;
+}
+
+#facets {
+	float: left;
+	width: 290px;
+	background: #fcfcfc;
+	-moz-box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px 0px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px 0px;
+	box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px 0px;
+	border-radius: 3px;
+	padding: 10px 10px;
+	margin: 0 0 0 10px;
+	
+	h2 {
+		font-size: 20px;
+	}
+	
+	h3 {
+		box-shadow: 0 1px 3px #000 inset, 0 1px 0 #fff;
+		background-color: #333;
+		color: white;
+		font-weight: normal;
+		font-size: 16px;
+		border-radius: 3px;
+		padding: 0 0 0 10px;
+		height: 26px;
+		line-height: 26px;
+		letter-spacing: 1px;
+	}
+	
+	ul {
+		margin: 10px 0;
+		li{
+			list-style: none;
+			font-size: 14px;
+			margin: 0 0 0 5px;
+			position: relative;
+			a {
+				margin: 0 0 0 10px;
+				color: rgb(0, 175, 233);
+			}
+			.meta {
+				position: absolute;
+				right: 5px	;
+				color: #ccc;
+			}
+		}
+	}
+	
+}
+
+section#results {
+	@include clearfix;
+	float: left;
+	width: 900px;
+	ul {
+		@include clearfix;
+		
+	}
+	li.place {
+		float: left;
+		width: 280px;
+		margin: 0 10px 20px 10px;
+		list-style: none;
+		div {
+			box-shadow: rgba(0, 0, 0, 0.296875) 0px 1px 3px 0px;
+			position: relative;
+			background-color: black;
+			aside {
+				position: absolute;
+				overflow: hidden;
+				white-space: nowrap;
+				bottom: 0px;
+				color: #fff;
+				background: #000;
+				background: rgba(0,0,0,0.65);
+				width: 272px;
+				height: 50px;
+				letter-spacing: 1px;
+				padding: 2px 4px;
+			}
+		}
+		
+	}
+}
