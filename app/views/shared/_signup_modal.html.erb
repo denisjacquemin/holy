@@ -1,0 +1,11 @@
+<div id="SignUpModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Sign up to Dodolidays</h3>
+  </div>
+  <div class="modal-body">Loading...</div>
+  <div class="modal-footer">
+	<p class="comment">Already an account? <%= link_to "Log in", login_path, :id => 'loginlink', 'data-target' => '#loginModal' %>
+    <p class="comment">By signing up you confirm that you accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p><button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+  </div>
+</div>

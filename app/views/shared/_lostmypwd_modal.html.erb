@@ -1,0 +1,12 @@
+<div id="lostmypwdModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">I lost my password</h3>
+  </div>
+  <div class="modal-body">Loading...</div>
+  <div class="modal-footer">
+	<p class="comment">Finnaly got your password? <%= link_to "Log in", login_path, :id => 'loginlink', 'data-target' => '#loginModal' %>
+    <p class="comment">No account yet? <%= link_to "Sign up", register_path, :id => 'signuplink', 'data-target' => '#SignUpModal' %></p>
+	<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
